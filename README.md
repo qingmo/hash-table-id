@@ -1,0 +1,1 @@
+# 适用于java String hash后计算对应的表id
