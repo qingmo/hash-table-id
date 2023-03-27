@@ -5,19 +5,28 @@ use clap::{Parser};
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 struct Args {
-    /// Name of the person to greet
+    /// Key of generate hash for database/table
     #[arg(short, long)]
     key: String,
 
-    /// Number of times to greet
+    /// Number of split target
     #[arg(short, long, default_value_t = 64)]
     count: i32,
+
+    /// rehash base
+    #[arg(short, long, default_value_t = 0)]
+    rehash: i32,
 }
 
 fn main() {
     let args = Args::parse();
     let hash = java_hash(args.key.as_str());
-    println!("{:?}", hash.abs() % args.count);
+    if args.rehash == 0 {
+        println!("{:?}", (hash % args.count).abs());
+    } else {
+        println!("{:?}", ((hash / args.rehash) % args.count).abs());
+    }
+    
 }
 
 pub fn java_hash(key: &str) -> i32 {
