@@ -19,3 +19,5 @@ cargo build --release
 
 You can use this cmd with Alfred.
 
+![demo](https://github.com/qingmo/hash-table-id/blob/master/demo.png)
+
