@@ -1,7 +1,17 @@
 [package]
 name = "hash-table-id"
+description = "get table num for key's hash code"
+authors = ["chaosmo <eagleqingluo@gmail.com>"]
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/qingmo/hash-table-id"
+homepage = "https://github.com/qingmo/hash-table-id"
+documentation = "https://docs.rs/hash-table-id/"
+readme = "README.md"
+license = "MIT"
+keywords = ["hash", "split-table", "java"]
+
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
