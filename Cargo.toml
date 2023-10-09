@@ -10,6 +10,7 @@ documentation = "https://docs.rs/hash-table-id/"
 readme = "README.md"
 license = "MIT"
 keywords = ["hash", "split-table", "java"]
+exclude = ["demo.png", "hash-table-id.alfredworkflow"]
 
 
 
